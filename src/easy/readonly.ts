@@ -1,4 +1,4 @@
-type ReadOnly<T> = {
+type MyReadOnly<T> = {
   readonly [P in keyof T]: T[P];
 };
 
@@ -8,4 +8,4 @@ type User = {
   date: Date;
 };
 
-type MyUser = ReadOnly<User>;
+type MyUser = MyReadOnly<User>;
